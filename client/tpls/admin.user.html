@@ -1,0 +1,30 @@
+<div ng-controller="userCtrl">
+	<h2 class="text-center text-primary">账户管理</h2>
+
+	<div class="margin-top-30 col-md-6 col-md-offset-3">
+		<form role="form" name="userFrom" ng-submit="submit(userFrom.$valid)" novalidate>
+			<div ng-class="{ 'has-error' : userFrom.username.$invalid && !userFrom.username.$pristine }">
+				<label class="text-muted">用户名</label>
+				<input type="text" class="form-control" placeholder="请输入用户名" name="username" ng-model="username" required ng-pattern="/^[^\s]{4,}$/">
+				<p ng-show="userFrom.username.$invalid && !userFrom.username.$pristine" class="help-block">用户名长度大于4的非空格字符串</p>
+			</div>
+			<p></p>
+			<div class="form-group" ng-class="{ 'has-error' : userFrom.password.$invalid && !userFrom.password.$pristine}">
+				<label class="text-muted">原密码</label>
+				<input type="password" class="form-control " placeholder="请输入原密码" name="password" ng-model="password" required ng-pattern="/[a-zA-Z0-9]{5,}/">
+				<p ng-show="userFrom.password.$invalid && !userFrom.password.$pristine" class="help-block">密码长度大于5的数字或字母</p>
+			</div>
+			<div class="form-group" ng-class="{ 'has-error' : userFrom.newPassword.$invalid && !userFrom.newPassword.$pristine}">
+				<label class="text-muted">新密码</label>
+				<input type="password" class="form-control " placeholder="请输入新密码" name="newPassword" ng-model="newPassword" required ng-pattern="/[a-zA-Z0-9]{5,}/">
+				<p ng-show="userFrom.newPassword.$invalid && !userFrom.newPassword.$pristine" class="help-block">密码长度大于5的数字或字母</p>
+			</div>
+			<div class="form-group" ng-class="{ 'has-error' : userFrom.confirmPassword.$invalid && !userFrom.confirmPassword.$pristine}">
+				<label class="text-muted">密码确认</label>
+				<input type="password" class="form-control " placeholder="请再输入一次新密码" name="confirmPassword" ng-model="confirmPassword" required ng-pattern="/[a-zA-Z0-9]{5,}/">
+				<p ng-show="userFrom.confirmPassword.$invalid && !userFrom.confirmPassword.$pristine" class="help-block">密码长度大于5的数字或字母</p>
+			</div>
+			<button type="submit" class="btn btn-success btn-block ok" ng-disabled="userFrom.$invalid">确定</button>
+		</form>
+	</div>
+</div>

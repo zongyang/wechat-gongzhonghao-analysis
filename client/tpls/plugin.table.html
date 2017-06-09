@@ -1,0 +1,22 @@
+<table class="p-table table  table-bordered table-striped">
+	<thead>
+		<tr>
+			<th class="text-center">序号</th>
+			<th class="text-center" ng-repeat="thName in thNames">{{thName}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="trData in trDatas">
+			<td class="text-center">{{(pageConfig.curentPage-1)*pageConfig.limit+$index + 1 }}</td>
+			<td ng-repeat="(key,value) in trData track by $index" ng-switch="isUrl(value)" ng-class="{'text-center':(value.length<35)}">
+				<div class="text-center"><a  ng-switch-when="true" href={{value}} target=_ blank>点击打开</a></div>
+				<span ng-switch-when="false">{{value|ellipsis:35}}</span>
+			</td>
+			<td ng-if="delOp||editOp" class="text-center">
+				<a href='#' ng-if="delOp" class="p-table-remove" ng-click="delDataHandle(trData)"><i class="fa fa-trash fa-lg fa-fw"></i></a>
+				<a href='#' ng-if="editOp" class="p-table-edit" ng-click="selectDataHandle(trData)"><i class="fa fa-edit fa-lg fa-fw"></i></a>
+			</td>
+		</tr>
+
+	</tbody>
+</table>

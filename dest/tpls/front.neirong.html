@@ -1,0 +1,23 @@
+<div ng-controller="neirongRankCtrl" class="panel panel-default front-panel">
+	<div class="panel-heading">
+		<div class="pull-left front-panel-title">内容榜</div>
+		<div class="pull-right">
+			<a ui-sref="front.neirong">MORE<i class="fa fa-fw fa-angle-double-right"></i></a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="panel-body">
+		<ul>
+			<li ng-repeat="data in neirongRankData" class="front-neirong-li"><img ng-src="{{data.nrImgUrl}}" class="front-neirong-img pull-right">
+				<div class="front-neirong-title">
+					<p class="line-height-22">
+						<a class="text-warning" ng-href="{{data.nrTitUrl}}" target="_blank"><strong>{{data.nrTit|ellipsis:30}}</strong></a>
+					</p>
+					<p>
+						<a ng-href="{{data.nrUserUrl}}">{{data.nrUserName|ellipsis:10}}</a><small class="text-muted">|{{data.nrTime}}</small></p>
+				</div>
+				<div class="clearfix"></div>
+			</li>
+		</ul>
+	</div>
+</div>

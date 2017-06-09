@@ -1,0 +1,25 @@
+<div class='modal fade topic-edit-modal margin-top-80' data-backdrop='static' role='dialog' data-keyboard='false'>
+	<div class='modal-dialog'>
+		<div class='modal-content'>
+			<div class='modal-header'>
+				<button class='close'>
+                    	<i class='fa fa-times'></i> 
+                	</button>
+				<h4 class='modal-title text-primary'>
+						<strong>添加话题</strong>
+					</h4>
+			</div>
+			<div class='modal-body'>
+				<form role="form" name="topicAddFrom" ng-submit="addData(topicAddFrom.$valid)" novalidate>
+					<div ng-class="{ 'has-error' : topicAddFrom.title.$invalid && !topicAddFrom.title.$pristine }">
+						<label class="text-muted">话题</label>
+						<input ng-disabled="edit" type="text" class="form-control" placeholder="请输入话题" name="title" ng-model="title" required ng-pattern="/^[^\s]+$/">
+						<p ng-show="topicAddFrom.title.$invalid && !topicAddFrom.title.$pristine" class="help-block">话题不能为空或有空格</p>
+					</div>
+					<p></p>
+					<button type="submit" class="btn btn-primary ok" ng-disabled="topicAddFrom.$invalid">确定</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

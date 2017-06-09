@@ -1,0 +1,7 @@
+<div class="text-center">
+	<ul class="pagination">
+		<li><a class="page-down" href="#">&laquo;</a></li>
+		<li class="page-turn" ng-repeat="pageNo in num2Arr(pageConfig.pages) track by $index"><a href="#">{{$index+1}}</a></li>
+		<li><a class="page-up" href="#">&raquo;</a></li>
+	</ul>
+</div>

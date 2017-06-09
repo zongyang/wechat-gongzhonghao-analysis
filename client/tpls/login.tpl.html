@@ -1,0 +1,27 @@
+<div ng-controller="wechatAppLoginCtrl">
+	<div class="container margin-top-80">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<div class="panel-title">
+							<h3 class="text-center">中大校园微信公众号分析系统(后台登录)</h3></div>
+					</div>
+					<div class="panel-body">
+						<form pLogin role="form" name="adminLoginForm" ng-submit="submit(adminLoginForm.$valid)" novalidate>
+							<div class="form-group" ng-class="{ 'has-error' : adminLoginForm.username.$invalid && !adminLoginForm.username.$pristine}">
+								<input name="username" class="form-control input-lg" ng-model="username" placeholder="请输入用户名" required>
+								<p ng-show="adminLoginForm.username.$invalid && !adminLoginForm.username.$pristine" class="help-block">用户名不能为空</p>
+							</div>
+							<div class="form-group" ng-class="{ 'has-error' : adminLoginForm.password.$invalid && !adminLoginForm.password.$pristine}">
+								<input name="password" type="password" class="form-control input-lg" ng-model="password" placeholder="请输入密码" required>
+								<p ng-show="adminLoginForm.password.$invalid && !adminLoginForm.password.$pristine" class="help-block">密码不能为空</p>
+							</div>
+							<button type="submit" class="btn btn btn-block btn-lg btn-success" ng-disabled="adminLoginForm.$invalid">登录</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

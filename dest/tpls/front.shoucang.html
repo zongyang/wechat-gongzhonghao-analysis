@@ -1,0 +1,20 @@
+<div ng-controller="shoucangRankCtrl" class="panel panel-default front-panel">
+	<div class="panel-heading">
+		<div class="pull-left front-panel-title">收藏榜</div>
+		<div class="pull-right">
+			<a ui-sref="front.shoucang">MORE<i class="fa fa-fw fa-angle-double-right"></i></a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="panel-body clearfix">
+		<ul>
+			<li class="front-shoucang-li" ng-repeat="data in shoucangRankData">
+				<p class="line-height-22">
+					<a class="text-warning" ng-href="{{data.scTitUrl}}" target="_blank"><strong>{{data.scTit|ellipsis:30}}</strong></a>
+				</p>
+				<p>
+					<a ng-href="{{data.scUserUrl}}" target="_blank">{{data.scUserName|ellipsis:10}}</a><small class="text-muted">|{{data.scTime}}</small></p>
+			</li>
+		</ul>
+	</div>
+</div>

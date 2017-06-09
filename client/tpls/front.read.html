@@ -1,0 +1,26 @@
+<div ng-controller="readRankCtrl" class="panel panel-default front-panel">
+	<div class="panel-heading">
+		<div class="pull-left front-panel-title">阅读榜</div>
+		<div class="pull-right"><a ui-sref="front.read">MORE<i class="fa fa-fw fa-angle-double-right"></i></a></div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="panel-body clearfix">
+		<ul>
+			<li class="row front-read-li" ng-repeat="data in readRankData">
+				<div class="col-sm-2 text-center">
+					<img ng-src="{{data.timgs}}" class="img-circle front-read-avator">
+					<p class="margin-top-5">{{data.tnickname}}</p>
+				</div>
+				<div class="col-sm-10">
+					<p><strong><a class="text-warning font-size-16" ng-href="{{data.titleUrl}}" target="_blank">{{data.title|ellipsis:30}}</a></strong></p>
+					<p class="text-indent-2 line-height-22">{{data.tcontent|ellipsis}}</p>
+					<div>
+						<div class="pull-left text-muted">阅读 {{data.treadNum}}</div>
+						<div class="pull-right text-muted">{{data.ttime}}</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+<div ng-controller="adminRootCtrl">
+
+
+	<!--
+		作者：zhangzengyang@qq.com
+		时间：2016-08-02
+		描述：头部导航
+	-->
+
+	<div class="container-fluid">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">中大校园微信公众号分析系统</a>
+				</div>
+				<div class="hidden-xs">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" ng-click="preventDefault($event)">欢迎您, {{user.username}}</a></li>
+						<li><a ui-sref="front">网站主页</a></li>
+						<li><a href="#" ng-click="logout($event)">注销</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="container margin-top-80">
+		<div class="row">
+
+			<!--
+	    	作者：zhangzengyang@qq.com
+	    	时间：2016-08-02
+	    	描述：侧边栏
+    	-->
+
+			<div class="col-md-2">
+				<p-sidebar></p-sidebar>
+			</div>
+
+			<!--
+        	作者：zhangzengyang@qq.com
+        	时间：2016-08-02
+        	描述：表格
+        -->
+			<div ui-view class="col-md-10"></div>
+		</div>
+
+	</div>
+</div>

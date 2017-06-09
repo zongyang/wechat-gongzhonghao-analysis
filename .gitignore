@@ -1,0 +1,17 @@
+node_modules/
+public/*
+.DS_Store
+npm-debug.log
+/docs/~$微信返还内容.docx
+/docs/~$api.docx
+/docs/QQ图片20160727083818.jpg
+/docs/QQ图片20160727083821.jpg
+/docs/QQ图片20160727083824.png
+/docs/QQ图片20160727083826.png
+/docs/QQ图片20160727083829.png
+/docs/QQ图片20160727083832.png
+/docs/QQ图片20160727083835.png
+/docs/QQ图片20160727083837.png
+/docs/QQ图片20160727083754.jpg
+/docs/签到吧web接口3.30.docx
+/.project

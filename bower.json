@@ -1,0 +1,23 @@
+{
+  "name": "wechat",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/zongyang/wechat-gongzhonghao-analysis",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dest/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "Font-Awesome#^4.6.3",
+    "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  }
+}

@@ -1,0 +1,29 @@
+<!--
+	作者：zhangzengyang@qq.com
+	时间：2016-08-02
+	描述：头部导航
+-->
+<div class="container-fluid">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+         <span class="sr-only">切换导航</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+			<a class="navbar-brand" ui-sref="front.index">中大校园微信公众号分析系统</a>
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav index-header-ul">
+				<li><a ui-sref="front.read">阅读榜</a></li>
+				<li><a ui-sref="front.like">点赞榜</a></li>
+				<li><a ui-sref="front.hot">热搜榜</a></li>
+				<li><a ui-sref="front.shoucang">收藏榜</a></li>
+				<li><a ui-sref="front.neirong">内容榜</a></li>
+			</ul>
+		</div>
+
+	</nav>
+</div>
+<div ui-view class="container margin-top-80"></div>
